@@ -13,10 +13,11 @@ links:
     description: Instantly deploy your Next.js site to a shareable URL with Vercel.
     url: 'https://vercel.com/new?utm_source=create-next-app'
 logo:
-  url: /old-logo.png
+  url: /next.svg
   alt: NextJS
 header: Get Started by editing app/page/tsx
 ---
+
 
 
 
