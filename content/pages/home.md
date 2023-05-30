@@ -3,7 +3,7 @@ links:
   - header: Docs
     description: Find in-depth information about Next.js features and API.
     url: 'https://nextjs.org/docs?utm_source=create-next-app'
-  - header: Learn
+  - header: Learndfgd
     description: Learn about Next.js in an interactive course with quizzes!
     url: 'https://nextjs.org/learn?utm_source=create-next-app'
   - header: Templates
@@ -17,6 +17,7 @@ logo:
   alt: NextJS
 header: Get Started by editing app/page/tsx
 ---
+
 
 
 
