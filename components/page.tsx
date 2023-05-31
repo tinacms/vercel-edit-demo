@@ -2,7 +2,7 @@
 
 import { PageQuery } from "@/tina/__generated__/types";
 import Image from "next/image";
-import { useTina } from "tinacms/dist/react";
+import { useTina, useEditState } from "tinacms/dist/react";
 import { useVisualEditing } from "@tinacms/vercel-previews";
 
 export function Page(props: {
@@ -11,11 +11,14 @@ export function Page(props: {
   query: string;
 }) {
   const { data: tinaData } = useTina(props);
+  const { edit: editMode } = useEditState();
+
   const data = useVisualEditing({
     ...props,
     enabled: true,
     data: tinaData,
     redirect: "/admin",
+    enabled: !editMode,
     stringEncoding: {
       skipPaths: (path) => {
         // Skip encoding URL strings since they wouldn't link properly
