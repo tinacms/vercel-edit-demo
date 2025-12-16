@@ -1,0 +1,139 @@
+[0;34m[INFO][0m Creating branch: fix/nextjs-cve-20251216
+Switched to a new branch 'fix/nextjs-cve-20251216'
+[0;32m✅ [SUCCESS][0m Created branch: fix/nextjs-cve-20251216
+[0;34m[INFO][0m Running npx fix-react2shell-next --fix...
+
+[1mfix-react2shell-next[0m[2m - Next.js vulnerability scanner
+[0m
+[2mChecking for 4 known vulnerabilities:
+[0m
+[2m  - [0m[31mCVE-2025-66478[0m[2m (critical): Remote code execution via crafted RSC payload[0m
+[2m  - [0m[33mCVE-2025-55184[0m[2m (high): DoS via malicious HTTP request causing server to hang and consume CPU[0m
+[2m  - [0m[36mCVE-2025-55183[0m[2m (medium): Compiled Server Action source code can be exposed via malicious request[0m
+[2m  - [0m[33mCVE-2025-67779[0m[2m (high): Incomplete fix for CVE-2025-55184 DoS via malicious RSC payload causing infinite loop[0m
+
+[2mFound 1 package.json file(s)
+[0m
+[31mFound 1 vulnerable file(s):
+[0m
+[33m  package.json[0m
+[2m     next: [0m[31m13.4.4[0m[2m -> [0m[32m14.2.35[0m[35m [CVE-2025-55184, CVE-2025-67779][0m
+[2m        Next.js 13.x must upgrade to 14.2.34 or later to fix this vulnerability.[0m
+
+[36m
+Applying fixes...
+[0m
+[32m   Updated package.json[0m
+[36m
+Installing dependencies...
+[0m
+[2m. (pnpm)[0m
+[2m
+$ pnpm install
+[0m
+ WARN  Ignoring broken lockfile at /Users/hark/ssw/automation/nextjs-cve-scanner/repos_temp/vercel-edit-demo: Lockfile /Users/hark/ssw/automation/nextjs-cve-scanner/repos_temp/vercel-edit-demo/pnpm-lock.yaml not compatible with current pnpm
+Progress: resolved 1, reused 0, downloaded 0, added 0
+ WARN  deprecated eslint@8.41.0: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+Progress: resolved 14, reused 11, downloaded 0, added 0
+Progress: resolved 14, reused 11, downloaded 3, added 0
+Progress: resolved 53, reused 44, downloaded 3, added 0
+Progress: resolved 59, reused 49, downloaded 9, added 0
+Progress: resolved 142, reused 122, downloaded 10, added 0
+Progress: resolved 212, reused 189, downloaded 11, added 0
+Progress: resolved 365, reused 337, downloaded 15, added 0
+Progress: resolved 465, reused 434, downloaded 19, added 0
+Progress: resolved 582, reused 526, downloaded 21, added 0
+Progress: resolved 773, reused 700, downloaded 22, added 0
+Progress: resolved 950, reused 850, downloaded 25, added 0
+Progress: resolved 1177, reused 1076, downloaded 28, added 0
+Progress: resolved 1215, reused 1097, downloaded 30, added 0
+Progress: resolved 1225, reused 1097, downloaded 38, added 0
+Progress: resolved 1235, reused 1100, downloaded 48, added 0
+Progress: resolved 1255, reused 1120, downloaded 57, added 0
+Progress: resolved 1435, reused 1291, downloaded 66, added 0
+Progress: resolved 1496, reused 1349, downloaded 74, added 0
+ WARN  10 deprecated subdependencies found: @babel/plugin-proposal-class-properties@7.18.6, @babel/plugin-proposal-object-rest-spread@7.20.7, @humanwhocodes/config-array@0.11.14, @humanwhocodes/object-schema@2.0.3, glob@7.1.7, glob@7.2.3, inflight@1.0.6, lodash.get@4.4.2, react-beautiful-dnd@13.1.1, rimraf@3.0.2
+Packages: +1431
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Progress: resolved 1501, reused 1354, downloaded 76, added 96
+Progress: resolved 1501, reused 1354, downloaded 76, added 274
+Progress: resolved 1501, reused 1354, downloaded 76, added 566
+Progress: resolved 1501, reused 1354, downloaded 76, added 1131
+Progress: resolved 1501, reused 1354, downloaded 76, added 1430
+Progress: resolved 1501, reused 1354, downloaded 76, added 1431, done
+ WARN  Issues with peer dependencies found
+.
+├─┬ @tinacms/cli 1.12.6
+│ ├── ✕ unmet peer react@">=18.3.1 <20.0.0": found 18.2.0
+│ ├── ✕ unmet peer react-dom@">=18.3.1 <20.0.0": found 18.2.0
+│ ├─┬ tinacms 2.10.1
+│ │ └─┬ @tinacms/mdx 1.8.3
+│ │   └─┬ typedoc 0.26.11
+│ │     └── ✕ unmet peer typescript@"4.6.x || 4.7.x || 4.8.x || 4.9.x || 5.0.x || 5.1.x || 5.2.x || 5.3.x || 5.4.x || 5.5.x || 5.6.x": found 5.9.3 in @tinacms/cli
+│ ├─┬ @tinacms/app 2.3.11
+│ │ ├── ✕ unmet peer react@">=18.3.1 <20.0.0": found 18.2.0
+│ │ └── ✕ unmet peer react-dom@">=18.3.1 <20.0.0": found 18.2.0
+│ └─┬ @tinacms/metrics 1.1.0
+│   └── ✕ unmet peer fs-extra@^9.0.1: found 11.3.2
+└─┬ @tinacms/vercel-previews 0.0.1
+  └─┬ tinacms 1.5.6
+    └─┬ @tinacms/toolkit 1.7.2
+      ├─┬ @udecode/plate-headless 14.4.3
+      │ └─┬ @udecode/plate-kbd 14.4.2
+      │   └─┬ @udecode/plate-core 14.4.2
+      │     └─┬ @radix-ui/react-slot 0.1.2
+      │       ├── ✕ unmet peer react@"^16.8 || ^17.0": found 18.2.0
+      │       └─┬ @radix-ui/react-compose-refs 0.1.0
+      │         └── ✕ unmet peer react@"^16.8 || ^17.0": found 18.2.0
+      └─┬ @react-aria/listbox 3.3.0
+        └── ✕ unmet peer react@"^16.8.0 || ^17.0.0-rc.1": found 18.2.0
+
+dependencies:
++ @tinacms/cli 1.12.6 (2.0.3 is available)
++ @tinacms/vercel-previews 0.0.1 (0.1.15 is available)
++ @types/node 20.2.5 (25.0.2 is available)
++ @types/react 18.2.7 (19.2.7 is available)
++ @types/react-dom 18.2.4 (19.2.3 is available)
++ autoprefixer 10.4.14 (10.4.23 is available)
++ eslint 8.41.0 (9.39.2 is available) deprecated
++ eslint-config-next 13.4.4 (16.0.10 is available)
++ next 14.2.35 (16.0.10 is available)
++ postcss 8.4.24 (8.5.6 is available)
++ react 18.2.0 (19.2.1 is available)
++ react-dom 18.2.0 (19.2.1 is available)
++ tailwindcss 3.3.2 (4.1.18 is available)
++ tinacms 1.6.7 (3.1.0 is available)
++ typescript 5.0.4 (5.9.3 is available)
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: better-sqlite3, esbuild, unrs-resolver.             │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Done in 24s using pnpm v10.20.0
+[32m
+Patches applied![0m
+[2m   Remember to test your app and commit the changes.
+[0m
+[0;32m✅ [SUCCESS][0m Fix command completed - vulnerabilities found and fixed
+[0;34m[INFO][0m Updating lockfiles for modified packages...
+[0;34m[INFO][0m   Found modified package.json in: .
+[0;34m[INFO][0m Processing directory: .
+[0;34m[INFO][0m   Detected pnpm-lock.yaml in ., running pnpm install...
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+╭ Warning ─────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│   Ignored build scripts: better-sqlite3, esbuild, unrs-resolver.             │
+│   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+│   to run scripts.                                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Done in 289ms using pnpm v10.20.0
+[0;32m✅ [SUCCESS][0m Lockfiles updated
+[0;34m[INFO][0m Changes detected, proceeding with commit...
