@@ -6,23 +6,25 @@
     "dev": "tinacms dev -c \"next dev\"",
     "build": "tinacms build && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "@tinacms/cli": "^1.5.14",
+    "@tinacms/cli": "^1.12.6",
     "@tinacms/vercel-previews": "^0.0.1",
-    "@types/node": "20.2.5",
-    "@types/react": "18.2.7",
+    "@types/node": "^20.19.27",
+    "@types/react": "^18.3.27",
     "@types/react-dom": "18.2.4",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4",
-    "next": "13.4.4",
-    "postcss": "8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2",
-    "tinacms": "^1.5.6",
-    "typescript": "5.0.4"
+    "autoprefixer": "^10.4.23",
+    "next": "^14.2.35",
+    "postcss": "^8.5.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.19",
+    "tinacms": "^2.10.1",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "eslint": "9.39.2",
+    "eslint-config-next": "^16.1.1"
   }
 }
